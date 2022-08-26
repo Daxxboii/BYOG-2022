@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Std_Upper_Teeth_Pbr
+  m_Shader: {fileID: 4800000, guid: c97c524a8e426ed42981718f450e903b, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _DISABLE_SSR_TRANSPARENT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
+  - RayTracingPrepass
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DiffuseMap:
+        m_Texture: {fileID: 2800000, guid: 6fec70838eeea044399365ae71d5ad21, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GradientAOMap:
+        m_Texture: {fileID: 2800000, guid: 0c5c98bef6e9c7d41b59c666111b2253, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GumsMaskMap:
+        m_Texture: {fileID: 2800000, guid: 98b6aa5e3515aa540a5301f67db68457, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: 461d877aaf05d0a46acd7255e91e288d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MicroNormalMap:
+        m_Texture: {fileID: 2800000, guid: efa4c8619a5a3994a8797e99b37fd2fd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: a9091fde4b742224abf5c8164ce7423f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AOStrength: 1
+    - _AlphaCutoff: 0.5
+    - _FrontAO: 0.71
+    - _GumsBrightness: 1.265
+    - _GumsSSS: 1
+    - _GumsSaturation: 0.45
+    - _GumsThickness: 0.35999998
+    - _IsUpperTeeth: 1
+    - _MicroNormalStrength: 0.5
+    - _MicroNormalTiling: 0.23
+    - _NormalStrength: 1
+    - _RearAO: 0
+    - _SmoothnessFront: 0.5638044
+    - _SmoothnessMax: 0.897
+    - _SmoothnessPower: 0.5
+    - _SmoothnessRear: 0
+    - _TeethBrightness: 0.95
+    - _TeethSSS: 0.406
+    - _TeethSaturation: 0.9
+    - _TeethThickness: 0.35999998
+    - _TransAmbient: 0.1
+    - _TransDirect: 0.9
+    - _TransNormal: 0.95
+    - _TransScattering: 2
+    - _TransShadow: 0.5
+    - _TransStrength: 2
+    - _TransmissionShadow: 0.5
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
+    - _SubsurfaceFalloff: {r: 0.6509804, g: 0.48235294, b: 0.39607844, a: 0}
+  m_BuildTextureStacks: []
