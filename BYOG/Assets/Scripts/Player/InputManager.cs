@@ -64,7 +64,6 @@ namespace UnityTutorial.Manager
         private void onMove(InputAction.CallbackContext context)
         {
             Move = context.ReadValue<Vector2>();
-            Debug.Log(Move);
         }
         private void onLook(InputAction.CallbackContext context)
         {
