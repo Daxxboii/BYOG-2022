@@ -1205,7 +1205,7 @@ Transform:
   - {fileID: 403930695114036181}
   - {fileID: 1588462561709973374}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8403603733716468491
 Animator:
@@ -1274,7 +1274,7 @@ MonoBehaviour:
   Cam: {fileID: 0}
   UpperLimit: -40
   BottomLimit: 70
-  MouseSensitivity: 21.9
+  MouseSensitivity: 5
   JumpFactor: 260
   Dis2Ground: 2.1
   GroundCheck:
