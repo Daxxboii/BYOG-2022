@@ -132,6 +132,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1695372688, guid: bb167ece38a62a9478613304701e8eac, type: 3}
+      propertyPath: Cam
+      value: 
+      objectReference: {fileID: 7236760256736008679}
     - target: {fileID: 159909248454611872, guid: bb167ece38a62a9478613304701e8eac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5519,6 +5523,12 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fdf2bf6a549862449ddcf18ede21aa6, type: 3}
+--- !u!4 &7236760256736008679 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7236760258383844521, guid: 9fdf2bf6a549862449ddcf18ede21aa6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7236760256736008678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7244952095653542418
 GameObject:
   m_ObjectHideFlags: 0
