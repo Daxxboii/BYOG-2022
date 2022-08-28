@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 483866}
   - component: {fileID: 3369478}
   - component: {fileID: 2397000}
+  - component: {fileID: 8129980691546812265}
   m_Layer: 8
   m_Name: Prop_Painting_D
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8129980691546812265
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151588}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.864427, y: 1.3661369, z: 0.058514196}
+  m_Center: {x: -0.32835737, y: 0.5747382, z: -0.002653229}
