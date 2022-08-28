@@ -11,7 +11,7 @@ namespace UnityTutorial.PlayerControl
     {
         [SerializeField] private float AnimBlendSpeed = 8.9f;
         [SerializeField] private Transform CameraRoot;
-        [SerializeField] private Transform Cam;
+        [SerializeField] public Transform Cam;
         [SerializeField] private float UpperLimit = -40f;
         [SerializeField] private float BottomLimit = 70f;
         [SerializeField] private float MouseSensitivity = 21.9f;
