@@ -69,6 +69,8 @@ public class Interactions : MonoBehaviour
             else if(_Interactable._Type == Interactable.Type.Portal)
             {
                 GameManager.instance.LoadScene(_Interactable.SceneToLoad);
+                _Interactable.gameObject.SetActive(false);
+                _Interactable = null;
             }
         }
     }

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public void Awake(){
         DontDestroyOnLoad(this.gameObject);
+        if (instance == null) instance = this;
     }
 
     public void LoadScene(string SceneName){

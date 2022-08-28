@@ -708,7 +708,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4762488965902626185, guid: d9000397fe6995541b3922625dc529c4,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762488965902626185, guid: d9000397fe6995541b3922625dc529c4,
+        type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762488965902626186, guid: d9000397fe6995541b3922625dc529c4,
+        type: 3}
+      propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -724,6 +734,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1089688252}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1089688254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4762488965902626185, guid: d9000397fe6995541b3922625dc529c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1089688252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1089688255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089688254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58179f94e9787c4ca13ea7a59235222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Type: 2
+  DoorAnimator: {fileID: 0}
+  NoteText: 
+  SceneToLoad: Lvl 1
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1223309268
 GameObject:
   m_ObjectHideFlags: 0
