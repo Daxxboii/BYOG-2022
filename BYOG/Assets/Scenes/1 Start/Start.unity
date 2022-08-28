@@ -839,6 +839,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.35411942
       objectReference: {fileID: 0}
+    - target: {fileID: 2157190282321425332, guid: bb167ece38a62a9478613304701e8eac,
+        type: 3}
+      propertyPath: AllDialoguesInScene.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157190282321425332, guid: bb167ece38a62a9478613304701e8eac,
+        type: 3}
+      propertyPath: AllDialoguesInScene.Array.data[8].DialogueType
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157190282321425332, guid: bb167ece38a62a9478613304701e8eac,
+        type: 3}
+      propertyPath: AllDialoguesInScene.Array.data[9].DialoguePerson
+      value: Creepy Voice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157190282321425332, guid: bb167ece38a62a9478613304701e8eac,
+        type: 3}
+      propertyPath: AllDialoguesInScene.Array.data[9].DialoGueContent
+      value: Follow the Light
+      objectReference: {fileID: 0}
     - target: {fileID: 2194490380854292457, guid: bb167ece38a62a9478613304701e8eac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2889,6 +2909,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1366184478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1366184479}
+  m_Layer: 3
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1366184479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366184478}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.39, y: 1.95, z: 0.19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7138617944013124044}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1423055717
 GameObject:
   m_ObjectHideFlags: 0
@@ -5949,7 +6000,11 @@ PrefabInstance:
       value: -268
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7138617943853778938, guid: 977f6d7348444a74e8df1e3572d4d4ca,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1366184479}
   m_SourcePrefab: {fileID: 100100000, guid: 977f6d7348444a74e8df1e3572d4d4ca, type: 3}
 --- !u!1 &7138617944013124042 stripped
 GameObject:
@@ -5970,12 +6025,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Type: 2
+  Tracker: {fileID: 1366184479}
   DoorAnimator: {fileID: 0}
   NoteText: 
   SceneToLoad: Lvl 1
   Event:
     m_PersistentCalls:
       m_Calls: []
+--- !u!4 &7138617944013124044 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7138617943853778938, guid: 977f6d7348444a74e8df1e3572d4d4ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 7138617944013124041}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7163664848222630231
 Transform:
   m_ObjectHideFlags: 0
