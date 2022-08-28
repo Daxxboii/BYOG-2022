@@ -6,11 +6,12 @@ using MyBox;
 
 public class EvilSuda : MonoBehaviour
 {
-     private NavMeshAgent agent;
+    public Animator Animator;
+    public float Cooldown_Period;
     // Start is called before the first frame update
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+
     }
 
     // Update is called once per frame
