@@ -22,7 +22,7 @@ public class EvilSuda : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         Player = GameObject.FindGameObjectWithTag("Player");
         PlayerController.Defended += OnDefend;
-        InvokeRepeating("Flicker", 3, 0);
+       // InvokeRepeating("Flicker", 3, 0);
     }
 
     // Update is called once per frame
