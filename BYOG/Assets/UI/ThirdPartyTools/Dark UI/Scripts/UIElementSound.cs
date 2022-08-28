@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 namespace Michsky.UI.Dark
 {
     [RequireComponent(typeof(AudioSource))]
-    public class UIElementSound : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
+    public class UIElementSound : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, ISelectHandler
     {
         [Header("RESOURCES")]
         public AudioSource audioSource;
@@ -50,6 +50,12 @@ namespace Michsky.UI.Dark
         {
             if (audioSource != null)
                 audioSource.PlayOneShot(notificationSound);
+        }
+
+        public void OnSelect(BaseEventData eventData)
+        {
+            if (enableHoverSound == true && audioSource != null)
+                audioSource.PlayOneShot(hoverSound);
         }
     }
 }

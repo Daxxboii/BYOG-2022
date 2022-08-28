@@ -10,11 +10,17 @@ namespace UnityTutorial.Manager
     {
         [SerializeField] private PlayerInput PlayerInput;
 
+        public delegate void OnInteracted();
+        public OnInteracted InteractPressed;
+
         public Vector2 Move { get; private set; }
         public Vector2 Look { get; private set; }
         public bool Run { get; private set; }
         public bool Jump { get; private set; }
         public bool Crouch { get; private set; }
+        public bool Interact { get; private set; }
+      
+       
 
         private InputActionMap _currentMap;
         private InputAction _moveAction;
@@ -22,6 +28,7 @@ namespace UnityTutorial.Manager
         private InputAction _runAction;
         private InputAction _jumpAction;
         private InputAction _crouchAction;
+        private InputAction _interactAction;
 
        
 
@@ -34,19 +41,22 @@ namespace UnityTutorial.Manager
                 _runAction = _currentMap.FindAction("Run");
                 _jumpAction = _currentMap.FindAction("Jump");
                 _crouchAction = _currentMap.FindAction("Crouch");
+            _interactAction = _currentMap.FindAction("Interact");
 
                 _moveAction.performed += onMove;
                 _lookAction.performed += onLook;
                 _runAction.performed += onRun;
                 _jumpAction.performed += onJump;
                 _crouchAction.started += onCrouch;
+            _interactAction.performed += OnInteract;
 
                 _moveAction.canceled += onMove;
                _lookAction.canceled += onLook;
                 _runAction.canceled += onRun;
                 _jumpAction.canceled += onJump;
                 _crouchAction.canceled += onCrouch;
-            
+
+
 
         }
 
@@ -81,7 +91,11 @@ namespace UnityTutorial.Manager
         {
             Crouch = context.ReadValueAsButton();
         }
-
+        private void OnInteract(InputAction.CallbackContext context)
+        {
+            //Interact = context.ReadValueAsButton();
+            InteractPressed.Invoke();
+        }
         private void OnEnable() {
             _currentMap.Enable();
         }

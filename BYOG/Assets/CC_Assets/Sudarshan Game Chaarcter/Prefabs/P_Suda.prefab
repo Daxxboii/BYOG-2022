@@ -1340,11 +1340,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _PlayerController: {fileID: 0}
+  _InputManager: {fileID: 0}
   Range: 5
   Layermask:
     serializedVersion: 2
-    m_Bits: 2147483647
-  InteractHandle: {fileID: 0}
+    m_Bits: 8
+  PlayerCanvas: {fileID: 6697486996981443262}
+  InteractHandle: {fileID: 1200982647533765410}
 --- !u!1 &1861533354249857896
 GameObject:
   m_ObjectHideFlags: 0

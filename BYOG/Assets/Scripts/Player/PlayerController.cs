@@ -135,17 +135,17 @@ namespace UnityTutorial.PlayerControl
             _animator.SetTrigger(_jumpHash);
 
             //Enable this if you want B-Hop
-            //_playerRigidbody.AddForce(-_playerRigidbody.velocity.y * Vector3.up, ForceMode.VelocityChange);
-            //_playerRigidbody.AddForce(Vector3.up * JumpFactor, ForceMode.Impulse);
-            //_animator.ResetTrigger(_jumpHash);
+            _playerRigidbody.AddForce(-_playerRigidbody.velocity.y * Vector3.up, ForceMode.VelocityChange);
+            _playerRigidbody.AddForce(Vector3.up * JumpFactor, ForceMode.Impulse);
+            _animator.ResetTrigger(_jumpHash);
         }
 
         public void JumpAddForce()
         {
             //Comment this out if you want B-Hop, otherwise the player will jump twice in the air
-           _playerRigidbody.AddForce(-_playerRigidbody.velocity.y * Vector3.up, ForceMode.VelocityChange);
+          /* _playerRigidbody.AddForce(-_playerRigidbody.velocity.y * Vector3.up, ForceMode.VelocityChange);
             _playerRigidbody.AddForce(Vector3.up * JumpFactor, ForceMode.Impulse);
-            _animator.ResetTrigger(_jumpHash);
+            _animator.ResetTrigger(_jumpHash);*/
         }
 
         private void SampleGround()

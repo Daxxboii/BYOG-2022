@@ -14,8 +14,13 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void LoadScene(int Index){
-        SceneManager.LoadSceneAsync(Index);
+    public void LoadScene(string SceneName){
+        SceneManager.LoadSceneAsync(SceneName);
+    }
+
+    public void LoadScene(int SceneIndex)
+    {
+        SceneManager.LoadSceneAsync(SceneIndex);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
