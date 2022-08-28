@@ -389,6 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Type: 3
+  Tracker: {fileID: 0}
   DoorAnimator: {fileID: 0}
   NoteText: 
   SceneToLoad: 
@@ -601,6 +602,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &907065305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 907065306}
+  m_Layer: 3
+  m_Name: Tracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &907065306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907065305}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1879687982}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1292800275
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Type: 2
+  Tracker: {fileID: 0}
   DoorAnimator: {fileID: 0}
   NoteText: 
   SceneToLoad: Corridor
@@ -1359,7 +1392,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1200035261164527695, guid: a17f940b59fd5a346bcb72dc1f759fbf,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 907065306}
   m_SourcePrefab: {fileID: 100100000, guid: a17f940b59fd5a346bcb72dc1f759fbf, type: 3}
 --- !u!1 &1200035260896535394 stripped
 GameObject:
@@ -1380,6 +1417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Type: 2
+  Tracker: {fileID: 907065306}
   DoorAnimator: {fileID: 0}
   NoteText: 
   SceneToLoad: Distructed Start

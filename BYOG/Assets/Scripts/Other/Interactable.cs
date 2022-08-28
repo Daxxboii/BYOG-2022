@@ -10,6 +10,8 @@ public class Interactable : MonoBehaviour
 
     public Type _Type;
 
+    public Transform Tracker;
+
     [Foldout("Door", true)]
     [SerializeField] private Animator DoorAnimator;
 

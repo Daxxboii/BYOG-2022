@@ -43,7 +43,7 @@ public class Interactions : MonoBehaviour
 
             _Interactable = hit.transform.gameObject.GetComponent<Interactable>();
 
-            Track(_Interactable.transform);
+            Track(_Interactable.Tracker.transform);
         }
         else
         {
