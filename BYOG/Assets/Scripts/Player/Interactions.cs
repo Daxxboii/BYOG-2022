@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityTutorial.PlayerControl;
 using UnityTutorial.Manager;
 using MyBox;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Interactions : MonoBehaviour
 {
@@ -12,24 +14,41 @@ public class Interactions : MonoBehaviour
     [SerializeField, ReadOnly] private InputManager _InputManager;
     [SerializeField, Range(1f, 10f)] private float Range;
     [SerializeField] private LayerMask Layermask;
+    [SerializeField] private TextMeshProUGUI NoteText;
+    [SerializeField] private GameObject NotePanel;
     private Camera PlayerCam;
     [SerializeField] private RectTransform PlayerCanvas;
+    public GameObject YouDied;
 
     [Foldout("Buttons")]
     [SerializeField] private RectTransform InteractHandle;
 
-    Interactable _Interactable;
+    public GameObject PauseMenu;
 
+    Interactable _Interactable;
+    public static Interactions instance;
     RaycastHit hit;
     Ray ray;
 
     // Start is called before the first frame update
     void Start()
     {
+        Restart.restart += Die;
         _PlayerController = GetComponent<PlayerController>();
         _InputManager = GetComponent<InputManager>();
         _InputManager.InteractPressed += Interact;
         PlayerCam = _PlayerController.Cam.GetComponent<Camera>();
+        CloseNote();
+        YouDied.SetActive(false);
+        PauseMenu.SetActive(false);
+        instance = this;
+    }
+
+    public void Pause()
+    {
+        PauseMenu.SetActive(!PauseMenu.activeInHierarchy);
+        Cursor.lockState = PauseMenu.activeInHierarchy ?CursorLockMode.None:CursorLockMode.Locked;
+        Time.timeScale = PauseMenu.activeInHierarchy ? 0f : 1f;
     }
 
     // Update is called once per frame
@@ -64,7 +83,9 @@ public class Interactions : MonoBehaviour
             }
             else if(_Interactable._Type == Interactable.Type.Note)
             {
-
+                NotePanel.SetActive(true);
+                NoteText.text = _Interactable.NoteText;
+                Time.timeScale = 0f;
             }
             else if(_Interactable._Type == Interactable.Type.Portal)
             {
@@ -75,11 +96,24 @@ public class Interactions : MonoBehaviour
         }
     }
 
+    public void CloseNote()
+    {
+        NotePanel.SetActive(false);
+        NoteText.text = "";
+        Time.timeScale = 1f;
+    }
+
     void Track(Transform GO)
     {
         Vector2 pos = PlayerCam.WorldToScreenPoint(GO.position);
         pos.x *= PlayerCanvas.rect.width / (float)PlayerCam.pixelWidth;
         pos.y *= PlayerCanvas.rect.height / (float)PlayerCam.pixelHeight;
         InteractHandle.anchoredPosition = pos - PlayerCanvas.sizeDelta / 2f;
+    }
+
+    public void Die()
+    {
+        YouDied.SetActive(true);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
     }
 }

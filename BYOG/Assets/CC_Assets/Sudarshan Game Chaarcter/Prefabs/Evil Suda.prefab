@@ -1854,6 +1854,7 @@ GameObject:
   - component: {fileID: 8547948275378124744}
   - component: {fileID: 4527541089626985890}
   - component: {fileID: 1420235387}
+  - component: {fileID: 1420235388}
   m_Layer: 0
   m_Name: Evil Suda
   m_TagString: Untagged
@@ -1915,6 +1916,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95949abeac314f94d825f7ca30614d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Animator: {fileID: 4527541089626985890}
+  Cooldown_Period: 10
+  agent: {fileID: 1420235388}
+  Player: {fileID: 0}
+  AttackDistance: 1
+  MaxDistanceForWarping: 100
+  FickerDistance: 15
+  Renderers:
+  - {fileID: 3838177621746528950}
+  - {fileID: 7213742429980864867}
+  - {fileID: 7187940740016083209}
+  - {fileID: 5433437702127809557}
+  - {fileID: 8775527109171317870}
+  - {fileID: 4992852650186505479}
+--- !u!195 &1420235388
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6008854512995034456}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.19
+  m_Speed: 2.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &6025791052549995969
 GameObject:
   m_ObjectHideFlags: 0

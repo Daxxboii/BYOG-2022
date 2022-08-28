@@ -15,7 +15,7 @@ namespace UnityTutorial.PlayerControl
         [SerializeField] private float UpperLimit = -40f;
         [SerializeField] private float BottomLimit = 70f;
         [SerializeField] private float MouseSensitivity = 21.9f;
-        [SerializeField, Range(10, 500)] private float JumpFactor = 260f;
+        [SerializeField, Range(10, 6000)] private float JumpFactor = 260f;
         [SerializeField] private float Dis2Ground = 0.8f;
         [SerializeField] private LayerMask GroundCheck;
         [SerializeField] private float AirResistance = 0.8f;
@@ -36,6 +36,9 @@ namespace UnityTutorial.PlayerControl
         private const float _walkSpeed = 2f;
         private const float _runSpeed = 6f;
         private Vector2 _currentVelocity;
+
+        public delegate void Acttion();
+        public static Acttion Defended;
         
 
 
@@ -54,12 +57,21 @@ namespace UnityTutorial.PlayerControl
             _crouchHash = Animator.StringToHash("Crouch");
 
             Cam = Camera.main.transform;
+
+            MenuManager.ChangedSensitivity += ChangedSensitivity;
+            ChangedSensitivity();
         }
 
        /* public override void OnNetworkSpawn(){
             if(!IsOwner)Destroy(_playerRigidbody);
         }*/
-        
+
+        private void ChangedSensitivity()
+        {
+            MouseSensitivity = MenuManager.instance.SensitivityValue;
+        }
+
+
         private void FixedUpdate() {
             SampleGround();
             Move();
@@ -172,6 +184,11 @@ namespace UnityTutorial.PlayerControl
         {
             _animator.SetBool(_fallingHash, !_grounded);
             _animator.SetBool(_groundHash, _grounded);
+        }
+
+        public void Defend()
+        {
+            Defended.Invoke();
         }
     }
 }

@@ -25,7 +25,8 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        DialoguePerson.text = AllDialoguesInScene[0].DialoguePerson + ":";
+        if (AllDialoguesInScene[0].DialoguePerson != "") DialoguePerson.text = AllDialoguesInScene[0].DialoguePerson + ":";
+        else DialoguePerson.text = AllDialoguesInScene[0].DialoguePerson + "";
         DialogueType.text = AllDialoguesInScene[0].DialogueType;
         DialoGueContent.text = AllDialoguesInScene[0].DialoGueContent;
     }
@@ -33,7 +34,8 @@ public class DialogueManager : MonoBehaviour
     public void NextDialogue()
     {
         DialogueIndex++;
-        DialoguePerson.text = AllDialoguesInScene[DialogueIndex].DialoguePerson + ":";
+        if(AllDialoguesInScene[DialogueIndex].DialoguePerson!="") DialoguePerson.text = AllDialoguesInScene[DialogueIndex].DialoguePerson + ":";
+        else { DialoguePerson.text = AllDialoguesInScene[0].DialoguePerson + ":"; }
         DialogueType.text = AllDialoguesInScene[DialogueIndex].DialogueType;
         DialoGueContent.text = AllDialoguesInScene[DialogueIndex].DialoGueContent;
     }
