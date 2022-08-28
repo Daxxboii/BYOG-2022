@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4633.624, g: 5410.1445, b: 6914.8594, a: 1}
+  m_IndirectSpecularColor: {r: 4827.454, g: 5852.546, b: 7684.828, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -369,7 +369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102726515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.631577, y: 3.78, z: 24.3}
+  m_LocalPosition: {x: 12.631577, y: 3.78, z: 20.65}
   m_LocalScale: {x: 773.4943, y: 11.734, z: 0.45223}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -672,7 +672,6 @@ MonoBehaviour:
   m_Script: {fileID: 1866297271}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &676208751
 Transform:
   m_ObjectHideFlags: 19
@@ -1368,7 +1367,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
