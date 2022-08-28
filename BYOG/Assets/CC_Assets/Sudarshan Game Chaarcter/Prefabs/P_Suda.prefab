@@ -1180,7 +1180,7 @@ GameObject:
   - component: {fileID: 4530130097188819275}
   m_Layer: 0
   m_Name: P_Suda
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
