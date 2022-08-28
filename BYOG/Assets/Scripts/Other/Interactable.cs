@@ -17,7 +17,7 @@ public class Interactable : MonoBehaviour
     [SerializeField, TextArea(10,50)] public string NoteText;
 
     [Foldout("Portal", true)]
-    [SerializeField, Scene] public string SceneToLoad;
+    [SerializeField,Scene] public string SceneToLoad;
 
     [Foldout("Trigger", true)]
     [SerializeField] public UnityEvent Event;
@@ -25,7 +25,7 @@ public class Interactable : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player") Event.Invoke();
-
+       
     }
 
 
