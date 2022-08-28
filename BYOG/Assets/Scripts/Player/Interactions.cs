@@ -60,7 +60,7 @@ public class Interactions : MonoBehaviour
         {
             if(_Interactable._Type == Interactable.Type.Door)
             {
-
+                _Interactable.DoorAnimator.SetBool("Open", !_Interactable.DoorAnimator.GetBool("Open"));
             }
             else if(_Interactable._Type == Interactable.Type.Note)
             {

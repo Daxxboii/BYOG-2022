@@ -1853,6 +1853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8547948275378124744}
   - component: {fileID: 4527541089626985890}
+  - component: {fileID: 1420235387}
   m_Layer: 0
   m_Name: Evil Suda
   m_TagString: Untagged
@@ -1880,7 +1881,7 @@ Transform:
   - {fileID: 3506769858955572027}
   - {fileID: 5751549052798141820}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -310.426, z: 0}
 --- !u!95 &4527541089626985890
 Animator:
@@ -1892,7 +1893,7 @@ Animator:
   m_GameObject: {fileID: 6008854512995034456}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 31e844f0776b8c4498442f08eed7aedc, type: 3}
-  m_Controller: {fileID: 9100000, guid: 8fc53f75f2322414482947e857bafd00, type: 2}
+  m_Controller: {fileID: 9100000, guid: 42e3a1cb6d160964cbbf7638fa95a789, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1902,6 +1903,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1420235387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6008854512995034456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95949abeac314f94d825f7ca30614d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6025791052549995969
 GameObject:
   m_ObjectHideFlags: 0

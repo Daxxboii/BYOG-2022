@@ -13,7 +13,7 @@ public class Interactable : MonoBehaviour
     public Transform Tracker;
 
     [Foldout("Door", true)]
-    [SerializeField] private Animator DoorAnimator;
+    [SerializeField] public Animator DoorAnimator;
 
     [Foldout("Note", true)]
     [SerializeField, TextArea(10,50)] public string NoteText;

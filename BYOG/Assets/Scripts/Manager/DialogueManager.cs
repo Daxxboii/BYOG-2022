@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
     public void NextDialogue()
     {
         DialogueIndex++;
-        DialoguePerson.text = AllDialoguesInScene[DialogueIndex].DialoguePerson;
+        DialoguePerson.text = AllDialoguesInScene[DialogueIndex].DialoguePerson + ":";
         DialogueType.text = AllDialoguesInScene[DialogueIndex].DialogueType;
         DialoGueContent.text = AllDialoguesInScene[DialogueIndex].DialoGueContent;
     }
